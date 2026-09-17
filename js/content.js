@@ -245,6 +245,7 @@ export const views = [
     pitchPoints: [
       { pitch: -0.09, yaw: 42.21, target: "view3" },
       { pitch: -23.33, yaw: 57.24, target: "view5" },
+      { pitch: 21.69, yaw: 137.03, target: "view9" },
     ],
   },
   {
