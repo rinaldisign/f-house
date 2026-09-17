@@ -764,18 +764,55 @@ html, body {
   }
   .toast { font-size: 12px; padding: 10px 16px; bottom: 22px; max-width: calc(100vw - 32px); white-space: normal; text-align: center; }
 
-  /* Hotspot navigasi ke panorama lain — dikecilkan ~40% dari desktop,
-     lalu dikecilkan lagi 50% khusus mobile (permintaan lanjutan) */
-  .nav-hotspot-ring { width: 14px; height: 14px; }
-  .nav-hotspot-ring::after { inset: -3px; }
-  .nav-hotspot-arrow { width: 6px; height: 6px; }
-  .nav-hotspot-label { font-size: 9px; }
+  /* Hotspot di mobile dibuat jadi titik kecil bersih (permintaan lanjutan):
+     ring diperkecil drastis, ring animasi pulse dihilangkan supaya tidak
+     menambah "lingkaran besar" di sekitar titik, dan area sentuh (tap
+     target) dibuat lebih lebar lewat ::before transparan supaya tetap
+     mudah di-tap jari walau bentuknya kecil. Hanya berlaku di mobile —
+     tampilan PC (di luar media query ini) tidak disentuh sama sekali. */
 
-  /* Hotspot content ikut dikecilkan 50% lagi, tetap lebih kecil dari nav-hotspot */
-  .content-hotspot-ring { width: 11px; height: 11px; }
-  .content-hotspot-ring::after { inset: -2px; }
-  .content-hotspot-icon { width: 5px; height: 5px; }
-  .content-hotspot-label { font-size: 8.5px; }
+  .nav-hotspot-ring,
+  .content-hotspot-ring,
+  .note-hotspot-ring {
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
+  }
+  .nav-hotspot-ring::after,
+  .content-hotspot-ring::after,
+  .note-hotspot-ring::after {
+    display: none;
+  }
+  .nav-hotspot-arrow,
+  .content-hotspot-icon,
+  .note-hotspot-icon {
+    width: 3px;
+    height: 3px;
+  }
+  .nav-hotspot-label,
+  .content-hotspot-label,
+  .note-hotspot-label {
+    font-size: 8px;
+  }
+  .nav-hotspot-inner,
+  .content-hotspot-inner,
+  .note-hotspot-inner {
+    gap: 3px;
+  }
+
+  /* Area sentuh tambahan (transparan, tak terlihat) supaya titik kecil
+     tetap nyaman di-tap di layar sentuh. */
+  .nav-hotspot-inner::before,
+  .content-hotspot-inner::before,
+  .note-hotspot-inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /* Hide default pannellum branding/controls we don't want */
