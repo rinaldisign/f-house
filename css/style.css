@@ -789,15 +789,19 @@ html, body {
     width: 3px;
     height: 3px;
   }
+  /* Nama ruang / label di bawah icon hotspot disembunyikan total di
+     mobile (permintaan lanjutan) — di layar kecil teks ini menumpuk
+     dan mengganggu tampilan 360. Icon (titik) tetap tampil & tetap
+     bisa di-tap seperti biasa, hanya teksnya yang dihilangkan. */
   .nav-hotspot-label,
   .content-hotspot-label,
   .note-hotspot-label {
-    font-size: 8px;
+    display: none;
   }
   .nav-hotspot-inner,
   .content-hotspot-inner,
   .note-hotspot-inner {
-    gap: 3px;
+    gap: 0;
   }
 
   /* Area sentuh tambahan (transparan, tak terlihat) supaya titik kecil
