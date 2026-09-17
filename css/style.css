@@ -766,16 +766,16 @@ html, body {
 
   /* Hotspot navigasi ke panorama lain — dikecilkan ~40% dari desktop,
      lalu dikecilkan lagi 50% khusus mobile (permintaan lanjutan) */
-  .nav-hotspot-ring { width: 14px; height: 14px; }
-  .nav-hotspot-ring::after { inset: -3px; }
-  .nav-hotspot-arrow { width: 6px; height: 6px; }
-  .nav-hotspot-label { font-size: 9px; }
+  .nav-hotspot-ring { width: 8px; height: 8px; }
+  .nav-hotspot-ring::after { inset: -2px; }
+  .nav-hotspot-arrow { width: 3px; height: 3px; }
+  .nav-hotspot-label { font-size: 4px; }
 
   /* Hotspot content ikut dikecilkan 50% lagi, tetap lebih kecil dari nav-hotspot */
-  .content-hotspot-ring { width: 11px; height: 11px; }
+  .content-hotspot-ring { width: 6px; height: 6px; }
   .content-hotspot-ring::after { inset: -2px; }
-  .content-hotspot-icon { width: 5px; height: 5px; }
-  .content-hotspot-label { font-size: 8.5px; }
+  .content-hotspot-icon { width: 2px; height: 2px; }
+  .content-hotspot-label { font-size: 3px; }
 }
 
 /* Hide default pannellum branding/controls we don't want */
