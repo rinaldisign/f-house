@@ -769,13 +769,13 @@ html, body {
   .nav-hotspot-ring { width: 8px; height: 8px; }
   .nav-hotspot-ring::after { inset: -2px; }
   .nav-hotspot-arrow { width: 3px; height: 3px; }
-  .nav-hotspot-label { font-size: 4px; }
+  .nav-hotspot-label { display: none; }
 
   /* Hotspot content ikut dikecilkan 50% lagi, tetap lebih kecil dari nav-hotspot */
   .content-hotspot-ring { width: 6px; height: 6px; }
   .content-hotspot-ring::after { inset: -2px; }
   .content-hotspot-icon { width: 2px; height: 2px; }
-  .content-hotspot-label { font-size: 3px; }
+  .content-hotspot-label { display: none; }
 }
 
 /* Hide default pannellum branding/controls we don't want */
