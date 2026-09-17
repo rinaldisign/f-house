@@ -92,11 +92,11 @@ export const floors = [
       { target: "view9", x: 15.9, y: 51.5 },
       { target: "view10", x: 19.7, y: 64.8 },
       { target: "view11", x: 36.4, y: 33.7 },
-      { target: "view11", x: 52.7, y: 58.4 },
-      { target: "view12", x: 45.7, y: 79.4 },
-      { target: "view13", x: 64.7, y: 75.5 },
-      { target: "view14", x: 80.9, y: 69.9 },
-      { target: "view15", x: 71.5, y: 45.4 },
+      { target: "view12", x: 52.7, y: 58.4 },
+      { target: "view13", x: 45.7, y: 79.4 },
+      { target: "view14", x: 64.7, y: 75.5 },
+      { target: "view15", x: 80.9, y: 69.9 },
+      { target: "view16", x: 71.5, y: 45.4 },
     ],
   },
 ];
@@ -256,8 +256,8 @@ export const views = [
       { pitch: -0.38, yaw: -108.94, target: "view8" },
       { pitch: -8.32, yaw: 77.37, target: "view10" },
       { pitch: -2.47, yaw: -15.57, target: "view11" },
-      { pitch: -1.61, yaw: 1.02, target: "view15" },
-      { pitch: -1.6, yaw: 9.35, target: "view11" },
+      { pitch: -1.61, yaw: 1.02, target: "view16" },
+      { pitch: -1.6, yaw: 9.35, target: "view12" },
     ],
   },
   {
@@ -284,8 +284,8 @@ export const views = [
     image: "assets/INT08.webp",
     yawOffset: 0,
     pitchPoints: [
-      { pitch: -7.33, yaw: -6.38, target: "view7" },
-      { pitch: -10.68, yaw: 21.88, target: "view1" },
+      { pitch: -5, yaw: -22.18, target: "view13" },
+      { pitch: -9.81, yaw: 96.94, target: "view9" },
     ],
   },
   {
@@ -294,8 +294,8 @@ export const views = [
     image: "assets/INT09.webp",
     yawOffset: 0,
     pitchPoints: [
-      { pitch: -7.33, yaw: -6.38, target: "view7" },
-      { pitch: -10.68, yaw: 21.88, target: "view1" },
+      { pitch: -22.1, yaw: 26.31, target: "view12" },
+      { pitch: -26.02, yaw: 86.67, target: "view14" },
     ],
   },
   {
@@ -304,8 +304,8 @@ export const views = [
     image: "assets/INT10.webp",
     yawOffset: 0,
     pitchPoints: [
-      { pitch: -7.33, yaw: -6.38, target: "view7" },
-      { pitch: -10.68, yaw: 21.88, target: "view1" },
+      { pitch: 1.16, yaw: 43.28, target: "view15" },
+      { pitch: -29.17, yaw: -87.21, target: "view13" },
     ],
   },
   {
@@ -314,8 +314,7 @@ export const views = [
     image: "assets/INT11.webp",
     yawOffset: 0,
     pitchPoints: [
-      { pitch: -7.33, yaw: -6.38, target: "view7" },
-      { pitch: -10.68, yaw: 21.88, target: "view1" },
+      { pitch: 4.68, yaw: 142.61, target: "view14" },
     ],
   },
   {
@@ -324,8 +323,7 @@ export const views = [
     image: "assets/INT12.webp",
     yawOffset: 0,
     pitchPoints: [
-      { pitch: -7.33, yaw: -6.38, target: "view7" },
-      { pitch: -10.68, yaw: 21.88, target: "view1" },
+      { pitch: -4.23, yaw: -104.78, target: "view9" },
     ],
   },
 ];
