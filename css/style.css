@@ -763,92 +763,19 @@ html, body {
     100% { width: 120px; opacity: 0.55; }
   }
   .toast { font-size: 12px; padding: 10px 16px; bottom: 22px; max-width: calc(100vw - 32px); white-space: normal; text-align: center; }
-}
 
-/* ============================================================
-   Hotspot khusus MOBILE/TOUCHSCREEN (iPhone dkk) — permintaan lanjutan.
-   Sengaja dipisah dari @media (max-width: 560px) di atas dan dibatasi
-   dengan (hover: none) + (pointer: coarse), BUKAN cuma lebar layar,
-   supaya jendela browser PC yang dikecilkan tetap memakai tampilan
-   hotspot PC (ring 46px/32px) dan tidak pernah tersentuh sama sekali
-   oleh aturan di bawah ini. Bentuk diubah total jadi dot polos kecil
-   TANPA ring/border/glow apapun, ukurannya ±20% dari dot sebelumnya
-   (dari 9px -> 2px), efek gelombang (ripple) dipertahankan tapi
-   diperkecil agar sepadan, dan area sentuh (tap target) dibuat lebar
-   lewat ::before transparan supaya titik yang sangat kecil ini tetap
-   mudah & responsif disentuh jari. */
-@media (max-width: 560px) and (hover: none) and (pointer: coarse) {
-  .nav-hotspot-ring,
-  .note-hotspot-ring {
-    width: 2px;
-    height: 2px;
-    border: none;
-    background: var(--accent);
-    box-shadow: none;
-  }
-  .content-hotspot-ring {
-    width: 2px;
-    height: 2px;
-    border: none;
-    background: var(--content-accent);
-    box-shadow: none;
-  }
-  .nav-hotspot-arrow,
-  .content-hotspot-icon,
-  .note-hotspot-icon {
-    display: none;
-  }
-  .nav-hotspot-ring::after,
-  .note-hotspot-ring::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    background: var(--accent);
-    opacity: 0.5;
-    animation: hotspot-mobile-wave 1.8s ease-out infinite;
-  }
-  .content-hotspot-ring::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    background: var(--content-accent);
-    opacity: 0.5;
-    animation: hotspot-mobile-wave 1.8s ease-out infinite;
-  }
-  @keyframes hotspot-mobile-wave {
-    0%   { transform: scale(1); opacity: 0.5; }
-    100% { transform: scale(5); opacity: 0; }
-  }
-  /* Nama ruang / label di bawah icon hotspot disembunyikan total di
-     mobile — di layar kecil teks ini menumpuk dan mengganggu tampilan
-     360. Titik tetap tampil & tetap bisa di-tap seperti biasa, hanya
-     teksnya yang dihilangkan. */
-  .nav-hotspot-label,
-  .content-hotspot-label,
-  .note-hotspot-label {
-    display: none;
-  }
-  .nav-hotspot-inner,
-  .content-hotspot-inner,
-  .note-hotspot-inner {
-    gap: 0;
-  }
+  /* Hotspot navigasi ke panorama lain — dikecilkan ~40% dari desktop,
+     lalu dikecilkan lagi 50% khusus mobile (permintaan lanjutan) */
+  .nav-hotspot-ring { width: 14px; height: 14px; }
+  .nav-hotspot-ring::after { inset: -3px; }
+  .nav-hotspot-arrow { width: 6px; height: 6px; }
+  .nav-hotspot-label { font-size: 9px; }
 
-  /* Area sentuh tambahan (transparan, tak terlihat) supaya titik yang
-     sangat kecil ini tetap nyaman & responsif di-tap dengan jari. */
-  .nav-hotspot-inner::before,
-  .content-hotspot-inner::before,
-  .note-hotspot-inner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    transform: translate(-50%, -50%);
-  }
+  /* Hotspot content ikut dikecilkan 50% lagi, tetap lebih kecil dari nav-hotspot */
+  .content-hotspot-ring { width: 11px; height: 11px; }
+  .content-hotspot-ring::after { inset: -2px; }
+  .content-hotspot-icon { width: 5px; height: 5px; }
+  .content-hotspot-label { font-size: 8.5px; }
 }
 
 /* Hide default pannellum branding/controls we don't want */
