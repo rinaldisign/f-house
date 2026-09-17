@@ -771,23 +771,52 @@ html, body {
      mudah di-tap jari walau bentuknya kecil. Hanya berlaku di mobile —
      tampilan PC (di luar media query ini) tidak disentuh sama sekali. */
 
+  /* Icon hotspot jadi dot kecil polos + efek gelombang transparan
+     (ripple) di mobile — bukan lagi bentuk panah/ring outline besar.
+     Base dot kecil, gelombang melebar & memudar berulang di sekelilingnya. */
+
   .nav-hotspot-ring,
-  .content-hotspot-ring,
   .note-hotspot-ring {
-    width: 8px;
-    height: 8px;
-    border-width: 1px;
+    width: 9px;
+    height: 9px;
+    border: none;
+    background: var(--accent);
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
   }
-  .nav-hotspot-ring::after,
-  .content-hotspot-ring::after,
-  .note-hotspot-ring::after {
-    display: none;
+  .content-hotspot-ring {
+    width: 9px;
+    height: 9px;
+    border: none;
+    background: var(--content-accent);
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
   }
   .nav-hotspot-arrow,
   .content-hotspot-icon,
   .note-hotspot-icon {
-    width: 3px;
-    height: 3px;
+    display: none;
+  }
+  .nav-hotspot-ring::after,
+  .note-hotspot-ring::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.55;
+    animation: hotspot-mobile-wave 1.8s ease-out infinite;
+  }
+  .content-hotspot-ring::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--content-accent);
+    opacity: 0.55;
+    animation: hotspot-mobile-wave 1.8s ease-out infinite;
+  }
+  @keyframes hotspot-mobile-wave {
+    0%   { transform: scale(1);   opacity: 0.55; }
+    100% { transform: scale(3.2); opacity: 0; }
   }
   /* Nama ruang / label di bawah icon hotspot disembunyikan total di
      mobile (permintaan lanjutan) — di layar kecil teks ini menumpuk
