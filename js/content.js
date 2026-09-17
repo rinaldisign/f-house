@@ -25,7 +25,7 @@
  *
  * NAMA PROJECT (projectName):
  *   Dipakai otomatis oleh js/viewer.js & js/vr.js untuk:
- *     - Judul tab browser        -> "(projectName) Virtual Tour | Earnest Architects"
+ *     - Judul tab browser        -> "(projectName) Virtual Tour | Rinaldisign"
  *     - Judul besar di layar     -> "(projectName) Virtual Tour"
  *     - Judul preview link sosmed (og:title / twitter:title)
  *   Ganti nilainya di sini saja, tidak perlu edit file JS/HTML lain.
@@ -37,8 +37,8 @@
  * ============================================================
  */
 
-export const projectName = "Kajanchi";
-export const metaDescription = "Kajanchi - 360° バーチャルツアー by Earnest Architects.";
+export const projectName = "F-House";
+export const metaDescription = "F House - 360° Virtual Tour";
 
 /* FITUR CATATAN HOTSPOT (note-finder.html + panel "Notes" di index.html):
    - true  -> icon 💬 "Leave a note" & panel "Notes" tampil, butuh Worker
@@ -70,8 +70,8 @@ export const floors = [
   {
     id: "floor1",
     label: "1F",
-    name: "1階",
-    image: "assets/floorplan.jpg",
+    name: "1F",
+    image: "assets/L1.webp",
     points: [
       { target: "view1", x: 72.2, y: 83 },
       { target: "view2", x: 47.4, y: 33 },
@@ -79,7 +79,24 @@ export const floors = [
       { target: "view4", x: 39, y: 22.7 },
       { target: "view5", x: 36.1, y: 15.1 },
       { target: "view6", x: 67.8, y: 15.9 },
+      { target: "view7", x: 52.8, y: 97.8 },
       { target: "view8", x: 52.8, y: 97.8 },
+    ],
+  },
+  {
+    id: "floor2",
+    label: "2F",
+    name: "2F",
+    image: "assets/L2.webp",
+    points: [
+      { target: "view9", x: 72.2, y: 83 },
+      { target: "view10", x: 47.4, y: 33 },
+      { target: "view11", x: 64, y: 24.5 },
+      { target: "view12", x: 39, y: 22.7 },
+      { target: "view13", x: 36.1, y: 15.1 },
+      { target: "view14", x: 67.8, y: 15.9 },
+      { target: "view15", x: 67.8, y: 15.9 },
+      { target: "view16", x: 67.8, y: 15.9 },
     ],
   },
 ];
@@ -143,8 +160,8 @@ export const floors = [
 export const views = [
   {
     id: "view1",
-    title: "Exterior-close",
-    image: "assets/EX2-CLOSE.jpg",
+    title: "Exterior-1",
+    image: "assets/EXT01.webp",
     yawOffset: 0,
     pitchPoints: [
       { pitch: 3.17, yaw: 97.59, target: "view2" },
@@ -154,8 +171,8 @@ export const views = [
   },
   {
     id: "view2",
-    title: "Master Bedroom",
-    image: "assets/pano2.jpg",
+    title: "Exterior-2",
+    image: "assets/EXT02.webp",
     yawOffset: 0,
     pitchPoints: [
       { pitch: -2.72, yaw: 87.5, target: "view1" },
@@ -164,8 +181,8 @@ export const views = [
   },
   {
     id: "view3",
-    title: "Master Bedroom",
-    image: "assets/pano3.jpg",
+    title: "Exterior-3",
+    image: "assets/EXT03.webp",
     yawOffset: 0,
     pitchPoints: [
       { pitch: -2.47, yaw: 10.51, target: "view1" },
@@ -175,8 +192,8 @@ export const views = [
   },
   {
     id: "view4",
-    title: "W.I.C",
-    image: "assets/pano4.jpg",
+    title: "Exterior-4",
+    image: "assets/EXT04.webp",
     yawOffset: 0,
     pitchPoints: [
       { pitch: -30.76, yaw: -158.68, target: "view3" },
@@ -185,8 +202,8 @@ export const views = [
   },
   {
     id: "view5",
-    title: "Dressing Room",
-    image: "assets/pano5.jpg",
+    title: "1F LDK-1",
+    image: "assets/INT01.webp",
     yawOffset: 0,
     pitchPoints: [
       { pitch: -15.21, yaw: 26.4, target: "view6" },
@@ -195,15 +212,15 @@ export const views = [
   },
   {
     id: "view6",
-    title: "Bathroom",
-    image: "assets/pano6.jpg",
+    title: "1F LDK-2",
+    image: "assets/INT02.webp",
     yawOffset: 0,
     pitchPoints: [{ pitch: -27.31, yaw: -87.86, target: "view5" }],
   },
   {
     id: "view7",
-    title: "Open",
-    image: "assets/EX-OPEN.jpg",
+    title: "1F LDK-3",
+    image: "assets/INT03.webp",
     yawOffset: 0,
     pitchPoints: [
       { pitch: 8.82, yaw: -6.25, target: "view8" },
@@ -212,8 +229,8 @@ export const views = [
   },
   {
     id: "view8",
-    title: "Exterior-close",
-    image: "assets/EX-CLOSE.jpg",
+    title: "1F LDK-4",
+    image: "assets/INT04.webp",
     yawOffset: 0,
     pitchPoints: [
       { pitch: -7.33, yaw: -6.38, target: "view7" },
@@ -222,13 +239,83 @@ export const views = [
   },
   {
     id: "view9",
-    title: "Open",
-    image: "assets/EX2-OPEN.jpg",
+    title: "2F Stairs Hall",
+    image: "assets/INT05.webp",
     yawOffset: 0,
     pitchPoints: [
       { pitch: 17.8, yaw: -43.33, target: "view1" },
       { pitch: -15.65, yaw: -95.91, target: "view8" },
       { pitch: 2.68, yaw: 97.91, target: "view2" },
+    ],
+  },
+  {
+    id: "view10",
+    title: "2F Toilet",
+    image: "assets/INT06.webp",
+    yawOffset: 0,
+    pitchPoints: [
+      { pitch: -7.33, yaw: -6.38, target: "view7" },
+      { pitch: -10.68, yaw: 21.88, target: "view1" },
+    ],
+  },
+  {
+    id: "view11",
+    title: "2F Bedroom 1",
+    image: "assets/INT07.webp",
+    yawOffset: 0,
+    pitchPoints: [
+      { pitch: -7.33, yaw: -6.38, target: "view7" },
+      { pitch: -10.68, yaw: 21.88, target: "view1" },
+    ],
+  },
+  {
+    id: "view11",
+    title: "2F Master Bedroom-1",
+    image: "assets/INT08.webp",
+    yawOffset: 0,
+    pitchPoints: [
+      { pitch: -7.33, yaw: -6.38, target: "view7" },
+      { pitch: -10.68, yaw: 21.88, target: "view1" },
+    ],
+  },
+  {
+    id: "view12",
+    title: "2F Master Bedroom-2",
+    image: "assets/INT09.webp",
+    yawOffset: 0,
+    pitchPoints: [
+      { pitch: -7.33, yaw: -6.38, target: "view7" },
+      { pitch: -10.68, yaw: 21.88, target: "view1" },
+    ],
+  },
+  {
+    id: "view13",
+    title: "2F W.I.C",
+    image: "assets/INT10.webp",
+    yawOffset: 0,
+    pitchPoints: [
+      { pitch: -7.33, yaw: -6.38, target: "view7" },
+      { pitch: -10.68, yaw: 21.88, target: "view1" },
+    ],
+  },
+  {
+    id: "view14",
+    title: "2F Bathroom",
+    image: "assets/INT11.webp",
+    yawOffset: 0,
+    pitchPoints: [
+      { pitch: -7.33, yaw: -6.38, target: "view7" },
+      { pitch: -10.68, yaw: 21.88, target: "view1" },
+    ],
+  },
+  {
+    id: "view15",
+    title: "2F Bedroom 2",
+    image: "assets/INT12.webp",
+    yawOffset: 0,
+    pitchPoints: [
+      { pitch: -7.33, yaw: -6.38, target: "view7" },
+      { pitch: -10.68, yaw: 21.88, target: "view1" },
     ],
   },
 ];
